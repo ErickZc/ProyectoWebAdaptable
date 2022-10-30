@@ -1,0 +1,14 @@
+#map {
+	height: 400px;
+	/* The height is 400 pixels */
+	width: 100%;
+	/* The width is the width of the web page */
+}
+
+.container-custom {
+    margin-top: 108px;
+	
+	background: url('../img/header-background.webp') center center no-repeat fixed;
+	background-size: cover;
+	text-align: center;
+}
