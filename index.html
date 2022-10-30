@@ -1,443 +1,504 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_MX">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19</title>
+  <!-- Icono en la pestaña del navegador -->
+  <link rel="shortcut icon" href="img/covid.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-
-    <!-- Menu -->
-    <nav id="navbarExample" class="navbar navbar-expand-lg bg-light fixed-top" aria-label="Main navigation">
-        <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">       
-            RINNOVO SA DE CV
+  <!-- Menu -->
+  <nav id="navbarExample" class="navbar navbar-expand-lg bg-light fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        RINNOVO SA DE CV
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#header">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#destacados">Destacados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#informacion">Información adicional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#impacto">Impacto</a>
+          </li>
+          <li class="nav-item dropdown me-2">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Artículos
             </a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#header">Inicio</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Variantes del SARS-CoV-2</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#destacados">Destacados</a>
+              <li><a class="dropdown-item" href="informacionMundial.html" target="_blank">Información Mundial del COVID-19</a></li>
+              <li>
+                <hr class="dropdown-divider">
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#informacion">Información adicional</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#impacto">Impacto</a>
-              </li>
-              <li class="nav-item dropdown me-2">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Artículos
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Variantes del SARS-CoV-2</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Síntomas del COVID-19</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="html/maps.html">Geolocalizar los casos de COVID</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="btn-solid-sm" href="#contacto">Contáctanos</a>
-              </li>
+              <li><a class="dropdown-item" href="#">Protocolos de seguridad</a></li>
             </ul>
-            <!-- <form class="d-flex" role="search"> -->
-              <!-- <input class="form-control form-control-input me-2" type="search" placeholder="Escribe algo ..." aria-label="Search"> -->
-              <!-- <button class="btn-solid-sm" type="submit">Buscar</button> -->
-            <!-- </form> -->
+          </li>
+          <li class="nav-item">
+            <a class="btn-solid-sm" href="#contacto">Contáctanos</a>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search"> -->
+        <!-- <input class="form-control form-control-input me-2" type="search" placeholder="Escribe algo ..." aria-label="Search"> -->
+        <!-- <button class="btn-solid-sm" type="submit">Buscar</button> -->
+        <!-- </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header id="header" class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-xl-5">
+          <div class="text-container">
+            <h1 class="h2-large text-start">Seguimiento de la propagación global del COVID-19</h1>
+            <p class="p-large text-start">El nuevo Coronavirus fue identificado por primera vez en diciembre de 2019 en
+              Wuhan, China, y desde entonces se ha propagado rápidamente de un país a otro, trayendo consigo una
+              devastación en forma de enfermedades y muertes masivas debido a la enfermedad ocasionada por el COVID-19
+            </p>
+            <a class="btn-solid-lg" href="#services">Leer mas</a>
           </div>
         </div>
-    </nav>
+        <div class="col-lg-6 col-xl-7">
+          <div class="image-container">
+            <img class="covid-header" src="./img/covid-header.png" alt="alternative">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Encabezado -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5">
-                    <div class="text-container">
-                        <h1 class="h2-large text-start">Seguimiento de la propagación global del COVID-19</h1>
-                        <p class="p-large text-start">El nuevo Coronavirus fue identificado por primera vez en diciembre de 2019 en Wuhan, China, y desde entonces se ha propagado rápidamente de un país a otro, trayendo consigo una devastación en forma de enfermedades y muertes masivas debido a la enfermedad ocasionada por el COVID-19</p>
-                        <a class="btn-solid-lg" href="#services">Leer mas</a>
-                    </div> 
-                </div>
-                <div class="col-lg-6 col-xl-7">
-                    <div class="image-container">
-                        <img class="covid-header" src="./img/covid-header.png" alt="alternative">
-                    </div>
-                </div>
+  <!-- Noticias -->
+  <div id="destacados" class="container-padding" style="background-color: #fcfafb;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 tittle-margin">
+          <h2 id="header-noticia">Noticias destacadas</h2>
+        </div>
+      </div>
+      <div class="row" id="row-noticia">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+          <div class="card">
+            <div class="card-icon img-center" style="background-color: #fbe4e4;">
+              <img src="./img/virus.png" width="55">
             </div>
+            <div class="card-body">
+              <h5 class="card-title">Variantes del SARS-CoV-2</h5>
+              <p>Todos los virus cambian con el paso del tiempo, y también lo hace el SARS-CoV-2, el virus causante de
+                la COVID-19. La mayoría de los cambios tienen escaso o nulo efecto sobre las propiedades del virus. Sin
+                embargo, algunos cambios pueden influir sobre algunas de ellas, como por ejemplo su facilidad de ...</p>
+              <a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
+            </div>
+          </div>
         </div>
-    </header>    
-    
-    <!-- Noticias -->
-    <div id="destacados" class="container-padding" style="background-color: #fcfafb;">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12 tittle-margin">
-                  <h2 id="header-noticia">Noticias destacadas</h2>
-              </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+          <div class="card">
+            <div class="card-icon red img-center">
+              <img src="./img/enfermo.png" width="50">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Síntomas del COVID-19</h5>
+              <p>El riesgo de propagación en la comunidad aún existe y requiere de contínua vigilancia para detener la
+                propagación y proteger la salud y la seguridad de nuestro personal y pacientes. <br> <br>Síntomas
+                comunes de COVID-19 ...</p>
+              <br><a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
+            </div>
           </div>
-          <div class="row" id="row-noticia">
-              <div class="col-sm-12 col-md-12 col-lg-4">
-                  <div class="card">
-                      <div class="card-icon img-center" style="background-color: #fbe4e4;">
-                         <img src="./img/virus.png" width="55" >
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Variantes del SARS-CoV-2</h5>
-                          <p>Todos los virus cambian con el paso del tiempo, y también lo hace el SARS-CoV-2, el virus causante de la COVID-19. La mayoría de los cambios tienen escaso o nulo efecto sobre las propiedades del virus. Sin embargo, algunos cambios pueden influir sobre algunas de ellas, como por ejemplo su facilidad de ...</p>
-                          <a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-4">  
-                  <div class="card">
-                      <div class="card-icon red img-center">
-                          <img src="./img/enfermo.png" width="50" >
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Síntomas del COVID-19</h5>
-                          <p>El riesgo de propagación en la comunidad aún existe y requiere de contínua vigilancia para detener la propagación y proteger la salud y la seguridad de nuestro personal y pacientes. <br> <br>Síntomas comunes de COVID-19 ...</p>
-                          <br><a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-4"> 
-                  <div class="card">
-                      <div class="card-icon green img-center" style="background-color: #e0f4ea;">
-                          <img src="./img/mascaras.png" width="55" >
-                      </div>
-                      <div class="card-body">
-                          <h5 class="card-title">Protocolos de seguridad</h5>
-                          <p>En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica. Llama por teléfono antes de acudir a tu proveedor de servicios sanitarios para que te dirijan al centro médico adecuado. De esta forma, te protegerás a ti y evitarás la propagación de virus y otras infecciones</p>
-                          <a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
-                      </div>
-                  </div>
-              </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4">
+          <div class="card">
+            <div class="card-icon green img-center" style="background-color: #e0f4ea;">
+              <img src="./img/mascaras.png" width="55">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Protocolos de seguridad</h5>
+              <p>En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica. Llama por teléfono
+                antes de acudir a tu proveedor de servicios sanitarios para que te dirijan al centro médico adecuado. De
+                esta forma, te protegerás a ti y evitarás la propagación de virus y otras infecciones</p>
+              <a class="read-more no-line" href="#">Leer más<span class="fas fa-long-arrow-alt-right"></span></a>
+            </div>
           </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Informacion -->
-    <div id="informacion" class="container-padding">
-      <div class="container">
-          <div class="row">
-              <h2 class="h2-heading text-start mb-4" id="header-info">Información  que necesitas saber</h2>
-              <div class="col-xl-12 ps-5" id="info-1">
-                <h3 class="h2-heading text-start">❅ ¿Qué es el coronavirus?</h3>
-                <p class="p-heading">El coronavirus es un grupo de virus que causan enfermedades que van desde el resfriado común hasta enfermedades más graves como neumonía, síndrome respiratorio de Oriente Medio (MERS) y síndrome respiratorio agudo grave (SARS). Cabe destacar que la cepa de coronavirus (2019-nCoV) que ha causado el brote en China es nueva y no se conocía previamente.</p>                  
-              </div>
-              <div class="col-xl-12 ps-5" id="info-2">
-                <h3 class="h2-heading text-start">❅ ¿Qué es la COVID-19?</h3>
-                <p class="p-heading">La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. Ambos eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.</p>                  
-              </div> 
-              <div class="col-xl-12 ps-5" id="info-3">
-                <h3 class="h2-heading text-start">❅ ¿Comó se originó el coronavirus?</h3>
-                <p class="p-heading">Comprender cómo surgió el síndrome respiratorio agudo severo coronavirus 2 (SARS-CoV-2) en 2019 es fundamental para prevenir brotes zoonóticos antes de que se conviertan en la próxima pandemia. El mercado mayorista de mariscos de Huanan en Wuhan, China, se identificó como una fuente probable de casos en los primeros informes, pero luego esta conclusión se volvió controvertida.</p>                  
-                <p class="p-heading">Mostramos que los primeros casos conocidos de COVID-19 de diciembre de 2019, incluidos aquellos sin vínculos directos informados, se centraron geográficamente en este mercado. Informamos que los mamíferos vivos susceptibles al SARS-CoV-2 se vendieron en el mercado a fines de 2019 y, dentro del mercado, las muestras ambientales positivas para el SARS-CoV-2 se asociaron espacialmente con vendedores que vendían mamíferos vivos. Si bien no hay pruebas suficientes para definir los eventos anteriores y las circunstancias exactas siguen siendo oscuras, nuestros análisis indican que la aparición del SARS-CoV-2 se produjo a través del comercio de vida silvestre en China y muestran que el mercado de Huanan fue el epicentro de la pandemia COVID-19.</p>
-                <div>
-                </div>
-              </div>
-              <div class="col-xl-12 ps-5" id="info-4">
-                <h2 class="h2-heading text-start">❅ ¿A quién afecta?</h2>
-                <p class="p-heading">Hay casos confirmados de coronavirus en casi todo del mundo, incluyendo China, Europa (siendo en Italia y España los primeros focos), Irán, Estados Unidos, África, Australia y LATAM. La Organización Mundial de la Salud (OMS) y la Organización Panamericana de la Salud (OPS) han reconocido el estado de pandemia, que supone el desarrollo de esta enfermedad. Es por ello que los viajes se han visto restringidos y muchos países ha cerrado sus fronteras, para tratar de evitar su expansión.</p>                  
-              </div>               
-          </div> 
-      </div>
-    </div>
-
-    <!-- Impacto -->
-    <div id="impacto" class="container-padding dropdown-menu-dark">
-      <div class="container">
-          <div class="row">
-              <div id="header-impacto">
-                <h2 class="h2-heading text-start mb-4">Atención a los países y poblaciones más afectados</h2>
-                <div class="col-xl-12 ps-5">
-                  <p class="p-heading">Desde el comienzo de esta pandemia, las
-                    Naciones Unidas han abogado por que se
-                    preste especial atención a los países y
-                    grupos con menor capacidad para hacer
-                    frente al virus y sus consecuencias. Esto
-                    incluye a los 63 países que ya se
-                    enfrentan a una crisis humanitaria o de
-                    refugiados, o con altos niveles de
-                    vulnerabilidad, y los grupos más afectados
-                    (mujeres, niños y personas de edad, con
-                    discapacidad, con problemas de salud
-                    mental y que están en movimiento, entre
-                    otras). Se han publicado una serie de
-                    informes de políticas para dar mayor
-                    relieve a esos países y grupos:</p>                  
-                </div>
-              </div>
-              <div class="col-xl-12 ps-5" id="impacto1">
-                <h3 class="h2-heading text-start mt-3">El impacto en África</h3>
-                <img src="./img/africa-covid.jpg" class="covid-impacto parallax-img" alt="">
-                <p class="p-heading">Los efectos de la COVID-19 en África no
-                  se conocerán en su totalidad hasta dentro
-                  de algún tiempo. Inicialmente se pensó
-                  que las respuestas tempranas y decisivas
-                  a nivel regional, nacional y comunitario,
-                  guiadas en parte por la reciente
-                  experiencia del Ébola y el VIH/sida,
-                  habían mantenido las cifras por debajo de
-                  los peores escenarios, pero la pandemia
-                  se está acelerando ahora en algunos
-                  países. Los riesgos en el continente son
-                  considerables, con una baja capacidad
-                  médica, de saneamiento y para realizar
-                  pruebas y dificultades para aplicar
-                  medidas sanitarias y de distanciamiento
-                  físico. Es probable que las consecuencias
-                  indirectas incluyan la inseguridad
-                  alimentaria, la pérdida de ingresos y de
-                  medios de vida, una crisis de la deuda y
-                  riesgos políticos y de seguridad. En el informe
-                  de políticas se hace un llamamiento a la
-                  solidaridad y el apoyo a los sistemas de salud
-                  del continente africano y a un acceso
-                  equitativo a las vacunas y tratamientos, una
-                  vez desarrollados; la adopción de medidas
-                  económicas que permitan proteger los medios
-                  de subsistencia y sostener las empresas,
-                  también en la economía informal;
-                  salvaguardar el acceso de los más vulnerables
-                  a los alimentos y mantener el sector agrícola
-                  en funcionamiento; y mantener la paz y la
-                  seguridad. En todas estas esferas, es
-                  importante velar por la inclusión y
-                  participación de las mujeres y las niñas, así
-                  como por que se respeten los derechos
-                  humanos de todos. En el informe se subraya
-                  la importancia para los países de África de
-                  que se conceda una moratoria general de la
-                  deuda, así como por un paquete de respuesta
-                  global que ascienda, como mínimo, al 10 %
-                  del producto interno bruto mundial. Para
-                  África, eso significa más de 200.000 millones
-                  de dólares para contar con una respuesta
-                  eficaz y sentar las bases para la recuperación.</p>                  
-              </div> 
-              <div class="col-xl-12 ps-5" id="impacto2">
-                <h3 class="h2-heading text-start mt-3">El impacto en América Latina</h3>
-                <img src="./img/latam-covid.webp" class="covid-impacto parallax-img" alt="">
-                <p class="p-heading">América Latina y el Caribe se ha convertido
-                  en un punto de los focos de la pandemia de
-                  COVID-19, que está golpeando a una región
-                  caracterizada por sistemas de salud frágiles y
-                  fragmentados, y profundas desigualdades en el acceso a la protección social. Se espera
-                  que la crisis sanitaria dé lugar a la peor
-                  recesión desde hace un siglo y a un fuerte
-                  aumento del desempleo, la pobreza, la
-                  desnutrición y la desigualdad, lo que
-                  intensificará el malestar social y los
-                  conflictos políticos. Antes de la pandemia,
-                  el modelo de desarrollo de América Latina
-                  y el Caribe ya se enfrentaba a graves
-                  limitaciones y vulnerabilidades
-                  estructurales. El informe de políticas (de
-                  próxima publicación) puede señalar cómo
-                  reconstruir mejor, con un nuevo modelo
-                  sostenible en cuatro dimensiones
-                  integradas: social, económica, ambiental
-                  y política. Para ello es necesario
-                  reconstruir con igualdad, incluso en
-                  materia de género y prestando especial
-                  atención a los grupos más vulnerables,
-                  sobre la base de una perspectiva de
-                  derechos humanos y de protección de los
-                  ricos ecosistemas naturales de la región.
-                  Es preciso aplicar nuevas políticas con
-                  transparencia, mayor rendición de cuentas
-                  e inclusión para apoyar la democracia,
-                  fortalecer el estado de derecho y luchar
-                  contra la corrupción y la delincuencia
-                  organizada. A nivel internacional, la
-                  respuesta multilateral inmediata debería
-                  ampliarse para ayudar a todos los países
-                  de América Latina y el Caribe,
-                  independientemente de que la mayoría de
-                  ellos se consideren países de ingresos
-                  medianos. Un Nuevo Pacto Verde Mundial,
-                  respaldado por la Agenda 2030, debería
-                  ser la base para relanzar la cooperación
-                  multilateral para el desarrollo sostenible.</p>                   
-              </div>
-              <div class="col-xl-12 ps-5" id="impacto3">
-                <h2 class="h2-heading text-start mt-3">El impacto en los Estados árabes</h2>
-                <img src="./img/arabes-covid.webp" class="covid-impacto parallax-img" alt="">
-                <p class="p-heading">En la región árabe, si bien hasta la fecha
-                  las medidas tempranas y decisivas han
-                  mantenido las tasas de transmisión y mortalidad por debajo del promedio mundial,
-                  la pandemia ha magnificado muchos
-                  problemas y desigualdades existentes desde
-                  hace tiempo. La región tiene profundas
-                  desigualdades, especialmente con respecto al
-                  papel de la mujer, y alberga comunidades y
-                  grupos de población particularmente
-                  vulnerables, pero también tiene importantes
-                  fuentes de resiliencia, entre ellas una
-                  población muy joven. Dada la diversidad de
-                  las economías árabes, algunas están mejor
-                  equipadas que otras para hacer frente a los
-                  efectos inmediatos sobre la salud y los efectos
-                  socioeconómicos de la pandemia. La crisis de
-                  la COVID-19 representa una oportunidad para
-                  abordar las debilidades estructurales de larga
-                  data y para reconstruir mejor. En el informe
-                  de políticas (de próxima publicación) se
-                  instará a prestar especial atención a
-                  cuestiones como: los grupos vulnerables,
-                  incluidos los refugiados y los desplazados
-                  internos; la resolución de los conflictos, la
-                  violencia y la corrupción subyacentes que
-                  socavan los esfuerzos de desarrollo; los
-                  planes de recuperación inclusiva y sostenible
-                  que aborden las desigualdades y las lagunas
-                  subyacentes en la protección social; los
-                  cambios en las modalidades de producción y
-                  consumo para hacerlas más sostenibles; la
-                  materialización del potencial sin aprovechar
-                  de las mujeres y los jóvenes de la región; el
-                  impulso a las pequeñas y medianas empresas
-                  como motores de la recuperación; el
-                  fortalecimiento del contrato social, y la
-                  creación de instituciones con mayor capacidad
-                  de respuesta; el apoyo internacional continuo,
-                  que incluye el apoyo humanitario, financiero,
-                  comercial y tecnológico; la implementación de
-                  la Agenda 2030, el Acuerdo de París, la
-                  Agenda de Acción de Addis Abeba y el Marco
-                  de Sendai como hojas de ruta para una mejor
-                  recuperación.</p>                  
-              </div>  
-              <div class="col-xl-12 ps-5" id="impacto4">
-                <h2 class="h2-heading text-start mt-3">El impacto en Asia Sudoriental </h2>
-                <img src="./img/asia-covid.jpg" class="covid-impacto parallax-img" alt="">
-                <p class="p-heading">En Asia Sudoriental, el impacto de la
-COVID-19 ha sido menos pronunciado
-que en otras partes del mundo porque
-los gobiernos de la subregión han
-actuado rápidamente para contener la
-pandemia y evitar sus peores efectos. No
-obstante, la COVID-19 ha puesto de
-relieve la insostenibilidad de la actual vía
-de desarrollo, ha aumentado los riesgos
-existentes y ha mostrado nuevos
-desafíos, entre ellos los relacionados con
-la paz y la seguridad. El informe de
-políticas (de próxima publicación) puede
-señalar cómo los países han demostrado
-adaptación, inclusión y resiliencia, lo que
-da muchos motivos de esperanza. A
-medida que la recuperación cobra
-impulso, las Naciones Unidas están
-dispuestas a colaborar con los gobiernos
-de Asia Sudoriental, la ASEAN y la
-comunidad internacional para trabajar en
-pro de un futuro sostenible. La
-cooperación entre las Naciones Unidas y
-la ASEAN será un vehículo importante
-para hacer frente a los desafíos.
-                </p>                  
-              </div>               
-          </div> 
-      </div>
-    </div>
-
-    <!-- Contacto -->
-    <div id="contacto" class="form-1">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6">
-                  <div class="text-container">
-                      <div class="section-title">CONTÁCTANOS</div>
-                      <h2>Puedes enviarnos tu información por aquí  </h2>
-                      <p>Ante el tema del coronavirus (COVID-19), escríbenos si tú o alguien más tiene síntomas de enfermedad respiratoria; si estás en un grupo de riesgo o si necesitas más información.</p>
-                      <p>Todos tenemos que trabajar juntos para ayudar a desacelerar la propagación del COVID-19.</p>
-                    </div>
-              </div>
-              <div class="col-lg-6">
-                <form>
-                  <div class="form-group">
-                      <input type="text" id="txtNombre" class="form-control form-contact" placeholder="Nombre completo" required>
-                  </div>
-                  <div class="form-group">
-                      <input type="email" id="txtCorreo" class="form-control form-contact" placeholder="Correo Electronico" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" id="txtTelefono" class="form-control form-contact" placeholder="Telefono" required>
-                  </div>
-                  <div class="form-group">
-                      <textarea class="form-control form-contact" id="txtComentario" rows="3" placeholder="Escribe tus comentarios ..." required></textarea>
-                      <p id="textComentario" class="text-muted text-end fst-italic mt-1" style="font-size: 0.8rem;">Debes escribir al menos <span id="txtCaracteres">30</span> caracteres</p>
-                    </div>
-                  <div class="form-group">
-                    <button class="btn btn-primary form-contact-button" type="button" onclick="showAlert()">Enviar</button>
-                  </div>
-              </form>
-
-              </div>
+  <!-- Informacion -->
+  <div id="informacion" class="container-padding">
+    <div class="container">
+      <div class="row">
+        <h2 class="h2-heading text-start mb-4" id="header-info">Información que necesitas saber</h2>
+        <div class="col-xl-12 ps-5" id="info-1">
+          <h3 class="h2-heading text-start">❅ ¿Qué es el coronavirus?</h3>
+          <p class="p-heading">El coronavirus es un grupo de virus que causan enfermedades que van desde el resfriado
+            común hasta enfermedades más graves como neumonía, síndrome respiratorio de Oriente Medio (MERS) y síndrome
+            respiratorio agudo grave (SARS). Cabe destacar que la cepa de coronavirus (2019-nCoV) que ha causado el
+            brote en China es nueva y no se conocía previamente.</p>
+        </div>
+        <div class="col-xl-12 ps-5" id="info-2">
+          <h3 class="h2-heading text-start">❅ ¿Qué es la COVID-19?</h3>
+          <p class="p-heading">La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto
+            más recientemente. Ambos eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de
+            2019.</p>
+        </div>
+        <div class="col-xl-12 ps-5" id="info-3">
+          <h3 class="h2-heading text-start">❅ ¿Comó se originó el coronavirus?</h3>
+          <p class="p-heading">Comprender cómo surgió el síndrome respiratorio agudo severo coronavirus 2 (SARS-CoV-2)
+            en 2019 es fundamental para prevenir brotes zoonóticos antes de que se conviertan en la próxima pandemia. El
+            mercado mayorista de mariscos de Huanan en Wuhan, China, se identificó como una fuente probable de casos en
+            los primeros informes, pero luego esta conclusión se volvió controvertida.</p>
+          <p class="p-heading">Mostramos que los primeros casos conocidos de COVID-19 de diciembre de 2019, incluidos
+            aquellos sin vínculos directos informados, se centraron geográficamente en este mercado. Informamos que los
+            mamíferos vivos susceptibles al SARS-CoV-2 se vendieron en el mercado a fines de 2019 y, dentro del mercado,
+            las muestras ambientales positivas para el SARS-CoV-2 se asociaron espacialmente con vendedores que vendían
+            mamíferos vivos. Si bien no hay pruebas suficientes para definir los eventos anteriores y las circunstancias
+            exactas siguen siendo oscuras, nuestros análisis indican que la aparición del SARS-CoV-2 se produjo a través
+            del comercio de vida silvestre en China y muestran que el mercado de Huanan fue el epicentro de la pandemia
+            COVID-19.</p>
+          <div>
           </div>
+        </div>
+        <div class="col-xl-12 ps-5" id="info-4">
+          <h2 class="h2-heading text-start">❅ ¿A quién afecta?</h2>
+          <p class="p-heading">Hay casos confirmados de coronavirus en casi todo del mundo, incluyendo China, Europa
+            (siendo en Italia y España los primeros focos), Irán, Estados Unidos, África, Australia y LATAM. La
+            Organización Mundial de la Salud (OMS) y la Organización Panamericana de la Salud (OPS) han reconocido el
+            estado de pandemia, que supone el desarrollo de esta enfermedad. Es por ello que los viajes se han visto
+            restringidos y muchos países ha cerrado sus fronteras, para tratar de evitar su expansión.</p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <div class="footer bg-gray">
-      <img class="decoration-circles" src="./img/decoration-circles.png" alt="alternative">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                  <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h4>
-              </div>
+  <!-- Impacto -->
+  <div id="impacto" class="container-padding dropdown-menu-dark">
+    <div class="container">
+      <div class="row">
+        <div id="header-impacto">
+          <h2 class="h2-heading text-start mb-4">Atención a los países y poblaciones más afectados</h2>
+          <div class="col-xl-12 ps-5">
+            <p class="p-heading">Desde el comienzo de esta pandemia, las
+              Naciones Unidas han abogado por que se
+              preste especial atención a los países y
+              grupos con menor capacidad para hacer
+              frente al virus y sus consecuencias. Esto
+              incluye a los 63 países que ya se
+              enfrentan a una crisis humanitaria o de
+              refugiados, o con altos niveles de
+              vulnerabilidad, y los grupos más afectados
+              (mujeres, niños y personas de edad, con
+              discapacidad, con problemas de salud
+              mental y que están en movimiento, entre
+              otras). Se han publicado una serie de
+              informes de políticas para dar mayor
+              relieve a esos países y grupos:</p>
           </div>
+        </div>
+        <div class="col-xl-12 ps-5" id="impacto1">
+          <h3 class="h2-heading text-start mt-3">El impacto en África</h3>
+          <img src="./img/africa-covid.jpg" class="covid-impacto parallax-img" alt="">
+          <p class="p-heading">Los efectos de la COVID-19 en África no
+            se conocerán en su totalidad hasta dentro
+            de algún tiempo. Inicialmente se pensó
+            que las respuestas tempranas y decisivas
+            a nivel regional, nacional y comunitario,
+            guiadas en parte por la reciente
+            experiencia del Ébola y el VIH/sida,
+            habían mantenido las cifras por debajo de
+            los peores escenarios, pero la pandemia
+            se está acelerando ahora en algunos
+            países. Los riesgos en el continente son
+            considerables, con una baja capacidad
+            médica, de saneamiento y para realizar
+            pruebas y dificultades para aplicar
+            medidas sanitarias y de distanciamiento
+            físico. Es probable que las consecuencias
+            indirectas incluyan la inseguridad
+            alimentaria, la pérdida de ingresos y de
+            medios de vida, una crisis de la deuda y
+            riesgos políticos y de seguridad. En el informe
+            de políticas se hace un llamamiento a la
+            solidaridad y el apoyo a los sistemas de salud
+            del continente africano y a un acceso
+            equitativo a las vacunas y tratamientos, una
+            vez desarrollados; la adopción de medidas
+            económicas que permitan proteger los medios
+            de subsistencia y sostener las empresas,
+            también en la economía informal;
+            salvaguardar el acceso de los más vulnerables
+            a los alimentos y mantener el sector agrícola
+            en funcionamiento; y mantener la paz y la
+            seguridad. En todas estas esferas, es
+            importante velar por la inclusión y
+            participación de las mujeres y las niñas, así
+            como por que se respeten los derechos
+            humanos de todos. En el informe se subraya
+            la importancia para los países de África de
+            que se conceda una moratoria general de la
+            deuda, así como por un paquete de respuesta
+            global que ascienda, como mínimo, al 10 %
+            del producto interno bruto mundial. Para
+            África, eso significa más de 200.000 millones
+            de dólares para contar con una respuesta
+            eficaz y sentar las bases para la recuperación.</p>
+        </div>
+        <div class="col-xl-12 ps-5" id="impacto2">
+          <h3 class="h2-heading text-start mt-3">El impacto en América Latina</h3>
+          <img src="./img/latam-covid.webp" class="covid-impacto parallax-img" alt="">
+          <p class="p-heading">América Latina y el Caribe se ha convertido
+            en un punto de los focos de la pandemia de
+            COVID-19, que está golpeando a una región
+            caracterizada por sistemas de salud frágiles y
+            fragmentados, y profundas desigualdades en el acceso a la protección social. Se espera
+            que la crisis sanitaria dé lugar a la peor
+            recesión desde hace un siglo y a un fuerte
+            aumento del desempleo, la pobreza, la
+            desnutrición y la desigualdad, lo que
+            intensificará el malestar social y los
+            conflictos políticos. Antes de la pandemia,
+            el modelo de desarrollo de América Latina
+            y el Caribe ya se enfrentaba a graves
+            limitaciones y vulnerabilidades
+            estructurales. El informe de políticas (de
+            próxima publicación) puede señalar cómo
+            reconstruir mejor, con un nuevo modelo
+            sostenible en cuatro dimensiones
+            integradas: social, económica, ambiental
+            y política. Para ello es necesario
+            reconstruir con igualdad, incluso en
+            materia de género y prestando especial
+            atención a los grupos más vulnerables,
+            sobre la base de una perspectiva de
+            derechos humanos y de protección de los
+            ricos ecosistemas naturales de la región.
+            Es preciso aplicar nuevas políticas con
+            transparencia, mayor rendición de cuentas
+            e inclusión para apoyar la democracia,
+            fortalecer el estado de derecho y luchar
+            contra la corrupción y la delincuencia
+            organizada. A nivel internacional, la
+            respuesta multilateral inmediata debería
+            ampliarse para ayudar a todos los países
+            de América Latina y el Caribe,
+            independientemente de que la mayoría de
+            ellos se consideren países de ingresos
+            medianos. Un Nuevo Pacto Verde Mundial,
+            respaldado por la Agenda 2030, debería
+            ser la base para relanzar la cooperación
+            multilateral para el desarrollo sostenible.</p>
+        </div>
+        <div class="col-xl-12 ps-5" id="impacto3">
+          <h2 class="h2-heading text-start mt-3">El impacto en los Estados árabes</h2>
+          <img src="./img/arabes-covid.webp" class="covid-impacto parallax-img" alt="">
+          <p class="p-heading">En la región árabe, si bien hasta la fecha
+            las medidas tempranas y decisivas han
+            mantenido las tasas de transmisión y mortalidad por debajo del promedio mundial,
+            la pandemia ha magnificado muchos
+            problemas y desigualdades existentes desde
+            hace tiempo. La región tiene profundas
+            desigualdades, especialmente con respecto al
+            papel de la mujer, y alberga comunidades y
+            grupos de población particularmente
+            vulnerables, pero también tiene importantes
+            fuentes de resiliencia, entre ellas una
+            población muy joven. Dada la diversidad de
+            las economías árabes, algunas están mejor
+            equipadas que otras para hacer frente a los
+            efectos inmediatos sobre la salud y los efectos
+            socioeconómicos de la pandemia. La crisis de
+            la COVID-19 representa una oportunidad para
+            abordar las debilidades estructurales de larga
+            data y para reconstruir mejor. En el informe
+            de políticas (de próxima publicación) se
+            instará a prestar especial atención a
+            cuestiones como: los grupos vulnerables,
+            incluidos los refugiados y los desplazados
+            internos; la resolución de los conflictos, la
+            violencia y la corrupción subyacentes que
+            socavan los esfuerzos de desarrollo; los
+            planes de recuperación inclusiva y sostenible
+            que aborden las desigualdades y las lagunas
+            subyacentes en la protección social; los
+            cambios en las modalidades de producción y
+            consumo para hacerlas más sostenibles; la
+            materialización del potencial sin aprovechar
+            de las mujeres y los jóvenes de la región; el
+            impulso a las pequeñas y medianas empresas
+            como motores de la recuperación; el
+            fortalecimiento del contrato social, y la
+            creación de instituciones con mayor capacidad
+            de respuesta; el apoyo internacional continuo,
+            que incluye el apoyo humanitario, financiero,
+            comercial y tecnológico; la implementación de
+            la Agenda 2030, el Acuerdo de París, la
+            Agenda de Acción de Addis Abeba y el Marco
+            de Sendai como hojas de ruta para una mejor
+            recuperación.</p>
+        </div>
+        <div class="col-xl-12 ps-5" id="impacto4">
+          <h2 class="h2-heading text-start mt-3">El impacto en Asia Sudoriental </h2>
+          <img src="./img/asia-covid.jpg" class="covid-impacto parallax-img" alt="">
+          <p class="p-heading">En Asia Sudoriental, el impacto de la
+            COVID-19 ha sido menos pronunciado
+            que en otras partes del mundo porque
+            los gobiernos de la subregión han
+            actuado rápidamente para contener la
+            pandemia y evitar sus peores efectos. No
+            obstante, la COVID-19 ha puesto de
+            relieve la insostenibilidad de la actual vía
+            de desarrollo, ha aumentado los riesgos
+            existentes y ha mostrado nuevos
+            desafíos, entre ellos los relacionados con
+            la paz y la seguridad. El informe de
+            políticas (de próxima publicación) puede
+            señalar cómo los países han demostrado
+            adaptación, inclusión y resiliencia, lo que
+            da muchos motivos de esperanza. A
+            medida que la recuperación cobra
+            impulso, las Naciones Unidas están
+            dispuestas a colaborar con los gobiernos
+            de Asia Sudoriental, la ASEAN y la
+            comunidad internacional para trabajar en
+            pro de un futuro sostenible. La
+            cooperación entre las Naciones Unidas y
+            la ASEAN será un vehículo importante
+            para hacer frente a los desafíos.
+          </p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- CopyRight -->
-    <div class="copyright bg-gray">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                  <ul class="list-unstyled li-space-lg p-small">
-                      <li><a href="#">Articulos publicados</a></li>
-                      <li><a href="#">Terminos y condiciones</a></li>
-                      <li><a href="#">Politica de privacidad</a></li>
-                  </ul>
-              </div>
-              <div class="col-lg-3 col-md-12 col-sm-12">
-                  <p class="p-small statement">Copyright © <a href="#">RINNOVO SA DE CV</a></p>
-              </div>
-
-              <div class="col-lg-3 col-md-12 col-sm-12">
-                  <p class="p-small statement">Distribuido por <a href="#" target="_blank">"Grupo DS19"</a></p>
-              </div>
+  <!-- Contacto -->
+  <div id="contacto" class="form-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="text-container">
+            <div class="section-title">CONTÁCTANOS</div>
+            <h2>Puedes enviarnos tu información por aquí </h2>
+            <p>Ante el tema del coronavirus (COVID-19), escríbenos si tú o alguien más tiene síntomas de enfermedad
+              respiratoria; si estás en un grupo de riesgo o si necesitas más información.</p>
+            <p>Todos tenemos que trabajar juntos para ayudar a desacelerar la propagación del COVID-19.</p>
+            <!-- Enlaces para Redes Sociales -->
+            <div>
+              <a href="http://m.me/pagina" target="_blank" style="text-decoration:none;">
+                <img src="img/messenger.png" alt="Messenger" width="40px" height="40px">
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=50312345678&text=prueba" target="_blank"
+                style="text-decoration:none;">
+                <img src="img/whatsapp.png" alt="Whatssapp" width="40px" height="40px">
+              </a>
+            </div>
           </div>
+        </div>
+        <div class="col-lg-6">
+          <form>
+            <div class="form-group">
+              <input type="text" id="txtNombre" class="form-control form-contact" placeholder="Nombre completo"
+                required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="txtCorreo" class="form-control form-contact" placeholder="Correo Electronico"
+                required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="txtTelefono" class="form-control form-contact" placeholder="Telefono" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control form-contact" id="txtComentario" rows="3"
+                placeholder="Escribe tus comentarios ..." required></textarea>
+              <p id="textComentario" class="text-muted text-end fst-italic mt-1" style="font-size: 0.8rem;">Debes
+                escribir al menos <span id="txtCaracteres">30</span> caracteres</p>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary form-contact-button" type="button" onclick="showAlert()">Enviar</button>
+            </div>
+          </form>
+
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Boton para subir -->
-    <button onclick="topFunction()" id="myBtn">
-      <img src="./img/up-arrow.png" alt="alternative">
-    </button>
+  <!-- Footer -->
+  <div class="footer bg-gray">
+    <img class="decoration-circles" src="./img/decoration-circles.png" alt="alternative">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s</h4>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>    
-  
+  <!-- CopyRight -->
+  <div class="copyright bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <ul class="list-unstyled li-space-lg p-small">
+            <li><a href="#">Articulos publicados</a></li>
+            <li><a href="#">Terminos y condiciones</a></li>
+            <li><a href="#">Politica de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <p class="p-small statement">Copyright © <a href="#">RINNOVO SA DE CV</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <p class="p-small statement">Distribuido por <a href="#" target="_blank">"Grupo DS19"</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boton para subir -->
+  <button onclick="topFunction()" id="myBtn">
+    <img src="./img/up-arrow.png" alt="alternative">
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+
   <script src="./js/greensock/TweenMax.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="./js/jquery.superscrollorama.js"></script>
   <script src="./js/scripts.js"></script>
 </body>
+
 </html>
