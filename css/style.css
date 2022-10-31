@@ -473,3 +473,18 @@ a {
 	}
 
 }	
+
+.confirmados{
+	background-color: #ffe3e3;
+	border: none;
+}
+
+.nuevosconfirmados{
+	background-color: #e3fafc;
+	border: none;
+}
+
+.muertes{
+	background-color: #e5e9f0;
+	border: none;
+}
