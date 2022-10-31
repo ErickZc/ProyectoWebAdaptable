@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CovidTraker - Estadísticas mundiales</title>
+  <!-- Icono en la pestaña del navegador -->
+  <link rel="shortcut icon" href="img/covid.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+
+  <!-- Menu -->
+  <nav id="navbarExample" class="navbar navbar-expand-lg bg-light fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html">
+        RINNOVO SA DE CV
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html#header">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#destacados">Destacados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#informacion">Informacion adicional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html#impacto">Impacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Articulos
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="analytics.html">Información en tiempo real</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="informacionMundial.html" target="_blank">Información Mundial del COVID-19</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Protocolos de seguridad</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- <form class="d-flex" role="search"> -->
+        <!-- <input class="form-control form-control-input me-2" type="search" placeholder="Escribe algo ..." aria-label="Search"> -->
+        <!-- <button class="btn-solid-sm" type="submit">Buscar</button> -->
+        <!-- </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Datos reales de contagios -->
+  <div class="container-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 tittle-margin">
+          <div style="color: red;">
+            <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div> LIVE
+          </div>
+          <h3>Información en tiempo real</h3>
+          <p>Un resumen de los casos nuevos y totales a nivel mundial actualizados diariamente.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-6 col-lg-4" style="height: auto;">
+          <div class="card confirmados">
+            <div class="card-header" style="background-color: #ffc9c9;border: none;">
+              <h5 class="text-center" style="color: #ff6b6b;">Nuevos casos confirmados</h5>
+            </div>
+            <div class="text-center">
+              <br>
+              <div class="loaderData" role="status">
+              </div>
+            </div>
+            <div class="card-body" id="newConfirmed">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="card nuevosconfirmados">
+            <div class="card-header" style="background-color: #c5f6fa;border: none;">
+              <h5 class="text-center" style="color: #22b8cf;">Total de casos confirmados</h5>
+            </div>
+            <div class="text-center">
+              <br>
+              <div class="loaderData" role="status">
+              </div>
+            </div>
+            <div class="card-body" id="totalConfirmed">
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-4">
+          <div class="card muertes">
+            <div class="card-header" style="background-color: #ced4da;border: none;">
+              <h5 class="text-center" style="color: #495057;">Total de muertes</h5>
+            </div>
+            <div class="text-center">
+              <br>
+              <div class="loaderData" role="status">
+              </div>
+            </div>
+            <div class="card-body" id="newDeaths">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-5 col-lg-3">
+          <button id="refresh" class="btn-solid-lg">
+            Actualizar datos
+          </button>
+        </div>
+      </div>
+
+      <br> <br>
+
+      <div class="row justify-content-center">
+        <p>
+        <h4 class="fst-italic text-center"> ¿Quieres conocer la información de tu país? </h4>
+        <p class="text-center">
+          Este registro devuelve todos los casos activos por tipo de caso para un país. Esta información se extrae cada 10 minutos.
+        </p>
+        </p>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <h5>Selecciona el país: </h5>
+          <form action="" id="formDatos">
+            <select class="form-select" id="names" aria-label="Default select example" required>
+            </select>
+            <br>
+            <input type="submit" class="btn btn-success" value="Buscar">
+          </form>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h5> Casos confirmados </h5>
+                <div class="loader" role="status">
+                </div>
+                <p id="byCountryCases"> </p>
+              </li>
+              <li class="list-group-item">
+                <h5> Muertes: </h5>
+                <div class="loader" role="status">
+                </div>
+                <p id="byCountryDeaths"> </p>
+              </li>
+              <li class="list-group-item">
+                <h5> Recuperados: </h5>
+                <div class="loader" role="status">
+                </div>
+                <p id="byCountryRecovered"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer bg-gray">
+    <img class="decoration-circles" src="../img/decoration-circles.png" alt="alternative">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CopyRight -->
+  <div class="copyright bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <ul class="list-unstyled li-space-lg p-small">
+            <li><a href="#">Articulos publicados</a></li>
+            <li><a href="#">Terminos y condiciones</a></li>
+            <li><a href="#">Politica de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <p class="p-small statement">Copyright © <a href="#">RINNOVO SA DE CV</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-12 col-sm-12">
+          <p class="p-small statement">Distribuido por <a href="#" target="_blank">"Grupo DS19"</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../js/Analytics.js"></script>
+  <script src="../js/greensock/TweenMax.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</body>
+
+</html>
