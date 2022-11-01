@@ -26,6 +26,15 @@ const DESCRIPTION9 = document.createElement("label");
 const DESCRIPTION10 = document.createElement("label");
 const IMAGE = document.createElement("img");
 
+function ZoomMap(){
+    $('.contenedorMapa').removeClass('transitionClose');
+    $('.contenedorMapa').addClass('transition');
+}
+function RemoveZoomMap(){
+    $('.contenedorMapa').removeClass('transition');
+    $('.contenedorMapa').addClass('transitionClose');
+}
+
 class CountryCollection {
     constructor(items) {
         this.items = items
